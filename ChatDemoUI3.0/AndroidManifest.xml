@@ -265,10 +265,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide" />
 
-        <activity android:name=".ui.SetServersActivity"
+        <activity
+            android:name=".ui.SetServersActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/horizontal_slide"
-            />
+            android:theme="@style/horizontal_slide" />
 
         <!-- 红包相关Activity start -->
         <!-- 发红包 -->
@@ -325,15 +325,13 @@
             android:name="com.easemob.redpacketui.ui.activity.RPTransferActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustPan|stateVisible"
-            />
+            android:windowSoftInputMode="adjustPan|stateVisible" />
         <!-- 转账详情页面 -->
         <activity
             android:name="com.easemob.redpacketui.ui.activity.RPTransferDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustPan|stateHidden"
-            />
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <!-- 红包相关Activity end -->
 
 
@@ -448,19 +446,21 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
 
         <!-- 设置环信应用的appkey -->
+        <!--我的环信APP_KEY-->1129161103178603#antschat-->
+        <!--Demo的APP_KEY-->easemob-demo#chatdemoui-->
         <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="easemob-demo#chatdemoui" />
+            android:value="	1129161103178603#antschat" />
         <!-- 声明sdk所需的service -->
         <service
             android:name="com.hyphenate.chat.EMChatService"
             android:exported="true"
             tools:ignore="ExportedService" />
 
-        <service android:name="com.hyphenate.chat.EMJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
             android:exported="true"
-            />
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <!-- 声明sdk所需的receiver -->
         <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">

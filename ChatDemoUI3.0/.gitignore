@@ -37,3 +37,6 @@ local.properties
 # Eclipse project files
 .classpath
 .project
+
+#过滤Project_specifications.txt文件
+/Project_specifications.txt
