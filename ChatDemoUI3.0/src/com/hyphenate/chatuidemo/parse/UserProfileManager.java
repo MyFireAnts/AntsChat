@@ -146,6 +146,7 @@ public class UserProfileManager {
 			@Override
 			public void onSuccess(EaseUser value) {
 			    if(value != null){
+					//设置用户昵称和用户图像
     				setCurrentUserNick(value.getNick());
     				setCurrentUserAvatar(value.getAvatar());
 			    }

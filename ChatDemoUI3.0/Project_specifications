@@ -9,6 +9,11 @@ git remote add origin https://github.com/MyFireAnts/AntsChat.git
 git push -u origin master
 git log
 
+同步方法：SDK 里大部分方法都为同步方法，即这个方法执行完毕，才会走后面的代码。
+
+异步方法：带有 callback 以及 API 注释里明确写明异步方法的方法，即不需要等这个方法走完，后边的代码就已经在执行
+         了，通过 callback 得到方法执行的结果。
+
 项目结构
 
 com.hyphenate.chatuidemo – 根目录，放置了几个全局管理类，如 DemoApplication、DemoHelper 等

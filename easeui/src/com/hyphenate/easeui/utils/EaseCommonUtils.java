@@ -13,8 +13,12 @@
  */
 package com.hyphenate.easeui.utils;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.app.ActivityManager;
+import android.app.ActivityManager.RunningTaskInfo;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.text.TextUtils;
 
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMMessage;
@@ -26,18 +30,14 @@ import com.hyphenate.util.EMLog;
 import com.hyphenate.util.HanziToPinyin;
 import com.hyphenate.util.HanziToPinyin.Token;
 
-import android.app.ActivityManager;
-import android.app.ActivityManager.RunningTaskInfo;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.text.TextUtils;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EaseCommonUtils {
 	private static final String TAG = "CommonUtils";
 	/**
 	 * check if network avalable
-	 * 
+	 * 检查网络是否可用
 	 * @param context
 	 * @return
 	 */
@@ -55,7 +55,7 @@ public class EaseCommonUtils {
 
 	/**
 	 * check if sdcard exist
-	 * 
+	 * 检查sdcard是否存在
 	 * @return
 	 */
 	public static boolean isSdcardExist() {
@@ -73,7 +73,7 @@ public class EaseCommonUtils {
 
 	/**
      * Get digest according message type and content
-     * 
+     * 根据消息类型和内容获取摘要
      * @param message
      * @param context
      * @return
@@ -132,6 +132,7 @@ public class EaseCommonUtils {
 	
 	/**
 	 * get top activity
+     * 获得顶部activity
 	 * @param context
 	 * @return
 	 */
@@ -147,8 +148,7 @@ public class EaseCommonUtils {
 	
 	/**
      * set initial letter of according user's nickname( username if no nickname)
-     * 
-     * @param username
+     * 根据用户昵称设置初始字母（如果没有昵称则为用户名）
      * @param user
      */
     public static void setUserInitialLetter(EaseUser user) {
@@ -192,6 +192,7 @@ public class EaseCommonUtils {
     
     /**
      * change the chat type to EMConversationType
+     * 改变聊天类型
      * @param chatType
      * @return
      */
